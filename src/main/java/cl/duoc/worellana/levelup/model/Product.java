@@ -15,17 +15,22 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
+    @Column(name = "NAME")
     private String name;
 
+    @Column(name = "SHORT_DESCRIPTION")
     private String ShortDescription;
         
+    @Column(name = "DESCRIPTION")
     private String description;
 
+    @Column(name = "PRICE")
     private Double price;
 
-    @Column(nullable = false)
+    @Column(name = "STOCK", nullable = false)
     private Integer stock = 0;
 
 }
